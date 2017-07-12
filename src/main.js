@@ -1,10 +1,18 @@
 /**
  * Created by shenlisha on 2017/7/12.
  */
-const Vue = require("vue");
+import Vue from 'vue';
+import Hello from './components/hello.vue';
+
 new Vue({
 	el: '#app',
-	data: {
-		message: 'hello'
-	}
+	template: '<div><hello></hello></div>',
+	components: {Hello}
 });
+/*
+new Vue({
+	el: "#app",
+	data: {
+		message: "hello"
+	}
+});*/
