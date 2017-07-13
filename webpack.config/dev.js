@@ -9,12 +9,7 @@ const root = path.resolve(__dirname, '..');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(baseConfig, {
-	entry: {
-		app: [
-//			'webpack/hot/dev-server', // 热替换处理入口文件
-			path.join(root, 'src/index.js')
-		]
-	},
+	entry: path.join(root, 'src/main.js'),
 	devServer: {
 		hot: true, // 告诉 dev-server 我们在使用 HMR
 		historyApiFallback: true, // 404的页面会自动跳转到/页面

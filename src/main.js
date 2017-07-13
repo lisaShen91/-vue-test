@@ -2,17 +2,19 @@
  * Created by shenlisha on 2017/7/12.
  */
 import Vue from 'vue';
-import Hello from './components/hello.vue';
+import router from './router';
+import App from './app';
+import '../dist/reset.css'
+//import Hello from './components/hello';
+
+console.log(router);
 
 new Vue({
 	el: '#app',
-	template: '<div><hello></hello></div>',
-	components: {Hello}
+	template: '<App />',
+	components: {App},
+	router
+//	render(h) {
+//		return h('div', null, 'sdfsdf')
+//	}
 });
-/*
-new Vue({
-	el: "#app",
-	data: {
-		message: "hello"
-	}
-});*/
